@@ -6,7 +6,7 @@
 }
 @font-face {
     font-family: "bebas";
-    src: url("/assets/fonts/bebas-regular.ttf");
+    src: url("/assets/fonts/bebas-regular.ttf") format(truetype);
 }
 body {
 
@@ -27,7 +27,7 @@ body {
     width: 100%;
 }
 .liverpool-text-heading {
-    font-family: "bebas" Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "bebas";
     font-size: 5rem;
     color: white;
     align-self: center;
@@ -50,4 +50,11 @@ body {
 .nav-bar-list a:hover {
     animation-delay: 400ms;
     color: blue;
+}
+/* Main section */
+
+/* Main Header */
+.main-heading {
+    font-family: "bebas";
+    text-align: center;
 }
