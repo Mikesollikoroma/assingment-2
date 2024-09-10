@@ -223,3 +223,52 @@ body {
 .defender-two-info-front:hover ~ .defender-two-info-back {
     transform: rotateY(0deg); 
 }
+
+/* Andy Robertson Section */
+
+.defender-three-section {
+    transform-style: preserve-3d;
+    perspective: 1000px; 
+    height: 32vh;
+    width: 100%;
+    grid-column: 10 / span 11;
+    grid-row: 1;
+    padding: 0;
+    margin: 0;
+    position: relative; 
+}
+
+.defender-three-info-front, .defender-three-info-back {
+    border-radius: 15px;
+    background-color: rgb(200, 16, 46);
+    height: 30vh;
+    width: 66%;
+    font-family: "bebas";
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    backface-visibility: hidden; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.8s ease; 
+}
+
+.defender-three-info-front {
+    transform: rotateY(0deg); 
+}
+
+
+.defender-three-info-back {
+    transform: rotateY(180deg); 
+}
+
+
+.defender-three-info-front:hover {
+    transform: rotateY(-180deg); 
+}
+
+
+.defender-three-info-front:hover ~ .defender-three-info-back {
+    transform: rotateY(0deg); 
+}
