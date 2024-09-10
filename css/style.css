@@ -39,6 +39,7 @@ body {
     /*border: 3px solid green;*/  
 }
 .nav-bar-list {
+    font-family: "bebas";
     list-style-type: none;
     cursor: pointer;
 }
@@ -57,4 +58,6 @@ body {
 .main-heading {
     font-family: "bebas";
     text-align: center;
+    font-size: 2rem;
+    padding-top: 5%;
 }
