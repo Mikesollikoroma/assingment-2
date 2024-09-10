@@ -61,3 +61,69 @@ body {
     font-size: 2rem;
     padding-top: 5%;
 }
+
+/* Team section styles */
+.team-section {
+    border: 3px solid red;
+    padding: 5%;
+}
+
+/* Goalkeeper styles */
+.goalkeeper-section {
+    border: 3px solid blue;
+    transform-style: preserve-3d;
+    perspective: 1000px; 
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    height: 32vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    position: relative; 
+}
+
+
+.goalkeeper-info-front, .goalkeeper-info-back {
+    border: 3px solid green;
+    border-radius: 15px;
+    background-color: rgb(200, 16, 46);
+    height: 30vh;
+    width: 18%;
+    font-family: "bebas";
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    grid-column: 1 / span 11;
+    backface-visibility: hidden; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.8s ease; 
+}
+
+/* Goalkeeper card styles */
+.goalkeeper-info-front {
+    transform: rotateY(0deg); 
+}
+
+
+.goalkeeper-info-back {
+    transform: rotateY(180deg); 
+}
+
+
+.goalkeeper-info-front:hover {
+    transform: rotateY(-180deg); 
+}
+
+
+.goalkeeper-info-front:hover ~ .goalkeeper-info-back {
+    transform: rotateY(0deg); 
+}
+
+
+.player-image img, .player-nationality img {
+    height: 18vh;
+    width: 70%;
+}
+
