@@ -66,17 +66,18 @@ body {
 .team-section {
     border: 3px solid red;
     padding: 5%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
 }
 
 /* Goalkeeper styles */
 .goalkeeper-section {
-    border: 3px solid blue;
     transform-style: preserve-3d;
     perspective: 1000px; 
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
     height: 32vh;
     width: 100%;
+    grid-column: 1 / span 11;
+    grid-row: 1;
     padding: 0;
     margin: 0;
     position: relative; 
@@ -84,7 +85,6 @@ body {
 
 
 .goalkeeper-info-front, .goalkeeper-info-back {
-    border: 3px solid green;
     border-radius: 15px;
     background-color: rgb(200, 16, 46);
     height: 30vh;
@@ -93,7 +93,6 @@ body {
     font-size: 1.5rem;
     color: white;
     text-align: center;
-    grid-column: 1 / span 11;
     backface-visibility: hidden; 
     position: absolute;
     top: 0;
@@ -124,6 +123,103 @@ body {
 
 .player-image img, .player-nationality img {
     height: 18vh;
-    width: 70%;
+    width: 72%;
 }
 
+/* Virgil Van Dijk Section */
+
+.defender-one-section {
+    transform-style: preserve-3d;
+    perspective: 1000px; 
+    height: 32vh;
+    width: 100%;
+    grid-column: 4 / span 11;
+    grid-row: 1;
+    padding: 0;
+    margin: 0;
+    position: relative; 
+}
+
+.defender-one-info-front, .defender-one-info-back {
+    border-radius: 15px;
+    background-color: rgb(200, 16, 46);
+    height: 30vh;
+    width: 21%;
+    font-family: "bebas";
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    backface-visibility: hidden; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.8s ease; 
+}
+
+.defender-one-info-front {
+    transform: rotateY(0deg); 
+}
+
+
+.defender-one-info-back {
+    transform: rotateY(180deg); 
+}
+
+
+.defender-one-info-front:hover {
+    transform: rotateY(-180deg); 
+}
+
+
+.defender-one-info-front:hover ~ .defender-one-info-back {
+    transform: rotateY(0deg); 
+}
+
+/* ibrahima konaté Section */ 
+
+.defender-two-section {
+    transform-style: preserve-3d;
+    perspective: 1000px; 
+    height: 32vh;
+    width: 100%;
+    grid-column: 7 / span 11;
+    grid-row: 1;
+    padding: 0;
+    margin: 0;
+    position: relative; 
+}
+
+.defender-two-info-front, .defender-two-info-back {
+    border-radius: 15px;
+    background-color: rgb(200, 16, 46);
+    height: 30vh;
+    width: 32%;
+    font-family: "bebas";
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    backface-visibility: hidden; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.8s ease; 
+}
+
+.defender-two-info-front {
+    transform: rotateY(0deg); 
+}
+
+
+.defender-two-info-back {
+    transform: rotateY(180deg); 
+}
+
+
+.defender-two-info-front:hover {
+    transform: rotateY(-180deg); 
+}
+
+
+.defender-two-info-front:hover ~ .defender-two-info-back {
+    transform: rotateY(0deg); 
+}
