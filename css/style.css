@@ -11,57 +11,64 @@
 body {
 
 }
-/* Header Section */
-
+/* Header */
 header {
     position: sticky;
     z-index: 100;
     top: 0;
 }
-.header-section {
+
+.header__section {
     display: flex;
     justify-content: space-between;
     background-color: rgb(200, 16, 46);
     width: 100%;
     height: 20vh;
 }
-.header-logo {
+
+.header__logo {
     align-content: center;
 }
-.liverpool-logo-img {
+
+.header__logo-img {
     height: 15vh;
     width: 100%;
 }
-.liverpool-text-heading {
+
+.header__heading {
     font-family: "bebas";
     font-size: 5rem;
     color: white;
     align-self: center;
 }
-.nav-bar-section {
+
+.header__nav {
     align-self: center;
     font-size: 1.5rem;
     margin-right: 2%;
-    /*border: 3px solid green;*/  
 }
-.nav-bar-list {
+
+.header__nav-list {
     font-family: "bebas";
     list-style-type: none;
     cursor: pointer;
 }
-.nav-bar-list a {
+
+.header__nav-list a {
     color: white;
     text-decoration: none;
     border-bottom: 2px solid white;
 }
-.nav-bar-list a:hover {
+
+.header__nav-list a:hover {
     animation-delay: 400ms;
     color: blue;
 }
+
 /* Main section */
 
 /* Main Header */
-.main-heading {
+.main__heading {
     font-family: "bebas";
     text-align: center;
     font-size: 2rem;
@@ -70,7 +77,7 @@ header {
 }
 
 /* Team section styles */
-.team-section {
+.team {
     border: 3px solid red;
     padding: 5% 5% 5% 10%;
     display: grid;
@@ -78,20 +85,19 @@ header {
 }
 
 /* Goalkeeper styles */
-.goalkeeper-section {
+.team__goalkeeper {
     transform-style: preserve-3d;
-    perspective: 1000px; 
+    perspective: 1000px;
     height: 32vh;
     width: 100%;
     grid-column: 1 / span 11;
     grid-row: 1;
     padding: 0;
     margin: 0;
-    position: relative; 
+    position: relative;
 }
 
-
-.goalkeeper-info-front, .goalkeeper-info-back {
+.team__goalkeeper-front, .team__goalkeeper-back {
     border-radius: 15px;
     background-color: rgb(200, 16, 46);
     height: 30vh;
@@ -100,54 +106,48 @@ header {
     font-size: 1.5rem;
     color: white;
     text-align: center;
-    backface-visibility: hidden; 
+    backface-visibility: hidden;
     position: absolute;
     top: 0;
     left: 0;
-    transition: transform 0.8s ease; 
+    transition: transform 0.8s ease;
 }
 
-
-.goalkeeper-info-front {
-    transform: rotateY(0deg); 
+.team__goalkeeper-front {
+    transform: rotateY(0deg);
 }
 
-
-.goalkeeper-info-back {
-    transform: rotateY(180deg); 
+.team__goalkeeper-back {
+    transform: rotateY(180deg);
 }
 
-
-.goalkeeper-info-front:hover {
-    transform: rotateY(-180deg); 
+.team__goalkeeper-front:hover {
+    transform: rotateY(-180deg);
 }
 
-
-.goalkeeper-info-front:hover ~ .goalkeeper-info-back {
-    transform: rotateY(0deg); 
+.team__goalkeeper-front:hover ~ .team__goalkeeper-back {
+    transform: rotateY(0deg);
 }
 
-
-.player-image img, .player-nationality img {
+.team__player-image img, .team__player-nationality img {
     height: 18vh;
     width: 72%;
 }
 
 /* Virgil Van Dijk Section */
-
-.defender-one-section {
+.team__defender--one {
     transform-style: preserve-3d;
-    perspective: 1000px; 
+    perspective: 1000px;
     height: 32vh;
     width: 100%;
     grid-column: 4 / span 11;
     grid-row: 1;
     padding: 0;
     margin: 0;
-    position: relative; 
+    position: relative;
 }
 
-.defender-one-info-front, .defender-one-info-back {
+.team__defender-front, .team__defender-back {
     border-radius: 15px;
     background-color: rgb(200, 16, 46);
     height: 30vh;
@@ -156,47 +156,43 @@ header {
     font-size: 1.5rem;
     color: white;
     text-align: center;
-    backface-visibility: hidden; 
+    backface-visibility: hidden;
     position: absolute;
     top: 0;
     left: 0;
-    transition: transform 0.8s ease; 
+    transition: transform 0.8s ease;
 }
 
-.defender-one-info-front {
-    transform: rotateY(0deg); 
+.team__defender-front {
+    transform: rotateY(0deg);
 }
 
-
-.defender-one-info-back {
-    transform: rotateY(180deg); 
+.team__defender-back {
+    transform: rotateY(180deg);
 }
 
-
-.defender-one-info-front:hover {
-    transform: rotateY(-180deg); 
+.team__defender-front:hover {
+    transform: rotateY(-180deg);
 }
 
-
-.defender-one-info-front:hover ~ .defender-one-info-back {
-    transform: rotateY(0deg); 
+.team__defender-front:hover ~ .team__defender-back {
+    transform: rotateY(0deg);
 }
 
-/* ibrahima konaté Section */ 
-
-.defender-two-section {
+/* Ibrahima Konaté Section */
+.team__defender--two {
     transform-style: preserve-3d;
-    perspective: 1000px; 
+    perspective: 1000px;
     height: 32vh;
     width: 100%;
     grid-column: 7 / span 11;
     grid-row: 1;
     padding: 0;
     margin: 0;
-    position: relative; 
+    position: relative;
 }
 
-.defender-two-info-front, .defender-two-info-back {
+.team__defender--two .team__defender-front, .team__defender--two .team__defender-back {
     border-radius: 15px;
     background-color: rgb(200, 16, 46);
     height: 30vh;
@@ -205,47 +201,43 @@ header {
     font-size: 1.5rem;
     color: white;
     text-align: center;
-    backface-visibility: hidden; 
+    backface-visibility: hidden;
     position: absolute;
     top: 0;
     left: 0;
-    transition: transform 0.8s ease; 
+    transition: transform 0.8s ease;
 }
 
-.defender-two-info-front {
-    transform: rotateY(0deg); 
+.team__defender--two .team__defender-front {
+    transform: rotateY(0deg);
 }
 
-
-.defender-two-info-back {
-    transform: rotateY(180deg); 
+.team__defender--two .team__defender-back {
+    transform: rotateY(180deg);
 }
 
-
-.defender-two-info-front:hover {
-    transform: rotateY(-180deg); 
+.team__defender--two .team__defender-front:hover {
+    transform: rotateY(-180deg);
 }
 
-
-.defender-two-info-front:hover ~ .defender-two-info-back {
-    transform: rotateY(0deg); 
+.team__defender--two .team__defender-front:hover ~ .team__defender-back {
+    transform: rotateY(0deg);
 }
 
 /* Andy Robertson Section */
-
-.defender-three-section {
+.team__defender--three {
     transform-style: preserve-3d;
-    perspective: 1000px; 
+    perspective: 1000px;
     height: 32vh;
     width: 100%;
     grid-column: 10 / span 11;
     grid-row: 1;
     padding: 0;
     margin: 0;
-    position: relative; 
+    position: relative;
 }
 
-.defender-three-info-front, .defender-three-info-back {
+.team__defender--three .team__defender-front, .team__defender--three .team__defender-back {
     border-radius: 15px;
     background-color: rgb(200, 16, 46);
     height: 30vh;
@@ -254,47 +246,43 @@ header {
     font-size: 1.5rem;
     color: white;
     text-align: center;
-    backface-visibility: hidden; 
+    backface-visibility: hidden;
     position: absolute;
     top: 0;
     left: 0;
-    transition: transform 0.8s ease; 
+    transition: transform 0.8s ease;
 }
 
-.defender-three-info-front {
-    transform: rotateY(0deg); 
+.team__defender--three .team__defender-front {
+    transform: rotateY(0deg);
 }
 
-
-.defender-three-info-back {
-    transform: rotateY(180deg); 
+.team__defender--three .team__defender-back {
+    transform: rotateY(180deg);
 }
 
-
-.defender-three-info-front:hover {
-    transform: rotateY(-180deg); 
+.team__defender--three .team__defender-front:hover {
+    transform: rotateY(-180deg);
 }
 
-
-.defender-three-info-front:hover ~ .defender-three-info-back {
-    transform: rotateY(0deg); 
+.team__defender--three .team__defender-front:hover ~ .team__defender-back {
+    transform: rotateY(0deg);
 }
 
-/* Trent Alexander Arnold Section */
-
-.defender-four-section {
+/* Trent Alexander-Arnold Section */
+.team__defender--four {
     transform-style: preserve-3d;
-    perspective: 1000px; 
+    perspective: 1000px;
     height: 32vh;
     width: 100%;
     grid-column: 1 / span 11;
     grid-row: 2;
     padding: 0;
     margin-top: 5%;
-    position: relative; 
+    position: relative;
 }
 
-.defender-four-info-front, .defender-four-info-back {
+.team__defender--four .team__defender-front, .team__defender--four .team__defender-back {
     border-radius: 15px;
     background-color: rgb(200, 16, 46);
     height: 30vh;
@@ -303,29 +291,25 @@ header {
     font-size: 1.5rem;
     color: white;
     text-align: center;
-    backface-visibility: hidden; 
+    backface-visibility: hidden;
     position: absolute;
     top: 0;
     left: 0;
-    transition: transform 0.8s ease; 
+    transition: transform 0.8s ease;
 }
 
-.defender-four-info-front {
-    transform: rotateY(0deg); 
+.team__defender--four .team__defender-front {
+    transform: rotateY(0deg);
 }
 
-
-.defender-four-info-back {
-    transform: rotateY(180deg); 
+.team__defender--four .team__defender-back {
+    transform: rotateY(180deg);
 }
 
-
-.defender-four-info-front:hover {
-    transform: rotateY(-180deg); 
+.team__defender--four .team__defender-front:hover {
+    transform: rotateY(-180deg);
 }
 
-
-.defender-four-info-front:hover ~ .defender-four-info-back {
-    transform: rotateY(0deg); 
+.team__defender--four .team__defender-front:hover ~ .team__defender-back {
+    transform: rotateY(0deg);
 }
-
