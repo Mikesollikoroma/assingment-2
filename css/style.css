@@ -313,3 +313,51 @@ header {
 .team__defender--four .team__defender-front:hover ~ .team__defender-back {
     transform: rotateY(0deg);
 }
+
+/* Midfielder styles */
+
+/* dominik szoboszlai section */
+
+.team__midfield--one {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    height: 32vh;
+    width: 100%;
+    grid-column: 4 / span 11;
+    grid-row: 2;
+    padding: 0;
+    margin-top: 6%;
+    position: relative;
+}
+
+.team__midfield-front, .team__midfield-back {
+    border-radius: 15px;
+    background-color: rgb(200, 16, 46);
+    height: 30vh;
+    width: 22%;
+    font-family: "bebas";
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.8s ease;
+}
+
+.team__midfield-front {
+    transform: rotateY(0deg);
+}
+
+.team__midfield-back {
+    transform: rotateY(180deg);
+}
+
+.team__midfield-front:hover {
+    transform: rotateY(-180deg);
+}
+
+.team__midfield-front:hover ~ .team__midfield-back {
+    transform: rotateY(0deg);
+}
