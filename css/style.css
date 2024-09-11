@@ -107,7 +107,7 @@ header {
     transition: transform 0.8s ease; 
 }
 
-/* Goalkeeper card styles */
+
 .goalkeeper-info-front {
     transform: rotateY(0deg); 
 }
