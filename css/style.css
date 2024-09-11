@@ -360,3 +360,95 @@ header {
 .team__midfield-front:hover ~ .team__midfield-back {
     transform: rotateY(0deg);
 }
+
+/* Alexsis Mac Allister Section */
+.team__midfield--two {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    height: 32vh;
+    width: 100%;
+    grid-column: 7 / span 11;
+    grid-row: 2;
+    padding: 0;
+    margin-top: 9%;
+    position: relative;
+}
+
+.team__midfield--two .team__midfield-front, .team__midfield--two .team__midfield-back {
+    border-radius: 15px;
+    background-color: rgb(200, 16, 46);
+    height: 30vh;
+    width: 33%;
+    font-family: "bebas";
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.8s ease;
+}
+
+.team__midfield--two .team__midfield-front {
+    transform: rotateY(0deg);
+}
+
+.team__midfield--two .team__midfield-back {
+    transform: rotateY(180deg);
+}
+
+.team__midfield--two .team__midfield-front:hover {
+    transform: rotateY(-180deg);
+}
+
+.team__midfield--two .team__midfield-front:hover ~ .team__midfield-back {
+    transform: rotateY(0deg);
+}
+
+/* Ryan Gravenberch Section */
+
+
+.team__midfield--three {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    height: 32vh;
+    width: 100%;
+    grid-column: 10 / span 11;
+    grid-row: 2;
+    padding: 0;
+    margin-top: 18%;
+    position: relative;
+}
+
+.team__midfield--three .team__midfield-front, .team__midfield--three .team__midfield-back {
+    border-radius: 15px;
+    background-color: rgb(200, 16, 46);
+    height: 30vh;
+    width: 66%;
+    font-family: "bebas";
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.8s ease;
+}
+
+.team__midfield--three .team__midfield-front {
+    transform: rotateY(0deg);
+}
+
+.team__midfield--three .team__midfield-back {
+    transform: rotateY(180deg);
+}
+
+.team__midfield--three .team__midfield-front:hover {
+    transform: rotateY(-180deg);
+}
+
+.team__midfield--three .team__midfield-front:hover ~ .team__midfield-back {
+    transform: rotateY(0deg);
+}
