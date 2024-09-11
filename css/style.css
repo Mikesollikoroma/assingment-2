@@ -330,7 +330,7 @@ header {
     position: relative;
 }
 
-.team__midfield-front, .team__midfield-back {
+.team__midfield--one .team__midfield-front, .team__midfield--one .team__midfield-back {
     border-radius: 15px;
     background-color: rgb(200, 16, 46);
     height: 30vh;
