@@ -774,3 +774,50 @@ header {
 .team__forward--six .team__forward-front:hover ~ .team__forward-back {
     transform: rotateY(0deg);
 }
+
+/* Manager Section */
+
+/* Arne Slot Section */
+.team__manager--one {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    height: 32vh;
+    width: 100%;
+    grid-column: 10 / span 11;
+    grid-row: 4;
+    padding: 0;
+    margin-top: 18%;
+    position: relative;
+}
+
+.team__manager--one .team__manager-front, .team__manager--one .team__manager-back {
+    border-radius: 15px;
+    background-color: rgb(200, 16, 46);
+    height: 30vh;
+    width: 66%;
+    font-family: "bebas";
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.8s ease;
+}
+
+.team__manager--one .team__manager-front {
+    transform: rotateY(0deg);
+}
+
+.team__manager--one .team__manager-back {
+    transform: rotateY(180deg);
+}
+
+.team__manager--one .team__manager-front:hover {
+    transform: rotateY(-180deg);
+}
+
+.team__manager--one .team__manager-front:hover ~ .team__manager-back {
+    transform: rotateY(0deg);
+}
