@@ -134,6 +134,8 @@ header {
     width: 72%;
 }
 
+/* Defender styles */
+
 /* Virgil Van Dijk Section */
 .team__defender--one {
     transform-style: preserve-3d;
@@ -495,5 +497,51 @@ header {
 }
 
 .team__midfield--three .team__midfield-front:hover ~ .team__midfield-back {
+    transform: rotateY(0deg);
+}
+
+/* Forward styles */
+
+.team__forward--one {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    height: 32vh;
+    width: 100%;
+    grid-column: 4 / span 11;
+    grid-row: 3;
+    padding: 0;
+    margin-top: 6%;
+    position: relative;
+}
+
+.team__forward-front, .team__forward-back {
+    border-radius: 15px;
+    background-color: rgb(200, 16, 46);
+    height: 30vh;
+    width: 22%;
+    font-family: "bebas";
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.8s ease;
+}
+
+.team__forward-front {
+    transform: rotateY(0deg);
+}
+
+.team__forward-back {
+    transform: rotateY(180deg);
+}
+
+.team__forward-front:hover {
+    transform: rotateY(-180deg);
+}
+
+.team__forward-front:hover ~ .team__forward-back {
     transform: rotateY(0deg);
 }
