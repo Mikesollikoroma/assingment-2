@@ -83,6 +83,10 @@ header {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 }
+.team__player-image img, .team__player-nationality img {
+    height: 18vh;
+    width: 72%;
+}
 
 /* Goalkeeper styles */
 .team__goalkeeper {
@@ -129,10 +133,7 @@ header {
     transform: rotateY(0deg);
 }
 
-.team__player-image img, .team__player-nationality img {
-    height: 18vh;
-    width: 72%;
-}
+
 
 /* Defender styles */
 
@@ -496,7 +497,7 @@ header {
     transform: rotateY(-180deg);
 }
 
-.team__midfield--three .team__midfield-front:hover ~ .team__midfield-back {
+.team__midfield--four .team__midfield-front:hover ~ .team__midfield-back {
     transform: rotateY(0deg);
 }
 
@@ -727,5 +728,50 @@ header {
 }
 
 .team__forward--five .team__forward-front:hover ~ .team__forward-back {
+    transform: rotateY(0deg);
+}
+
+/* Darwin Nunez Section */
+.team__forward--six {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    height: 32vh;
+    width: 100%;
+    grid-column: 7 / span 11;
+    grid-row: 4;
+    padding: 0;
+    margin-top: 9%;
+    position: relative;
+}
+
+.team__forward--six .team__forward-front, .team__forward--six .team__forward-back {
+    border-radius: 15px;
+    background-color: rgb(200, 16, 46);
+    height: 30vh;
+    width: 33%;
+    font-family: "bebas";
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.8s ease;
+}
+
+.team__forward--six .team__forward-front {
+    transform: rotateY(0deg);
+}
+
+.team__forward--six .team__forward-back {
+    transform: rotateY(180deg);
+}
+
+.team__forward--six .team__forward-front:hover {
+    transform: rotateY(-180deg);
+}
+
+.team__forward--six .team__forward-front:hover ~ .team__forward-back {
     transform: rotateY(0deg);
 }
