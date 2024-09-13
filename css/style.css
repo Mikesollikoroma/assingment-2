@@ -847,3 +847,191 @@ header {
     color: blue;
     cursor: pointer;
 }
+
+/* Media Queries Section */
+
+/* tablets (max-width: 1334px) */
+@media only screen and (max-width: 1334px) {
+    
+    /* Header adjustments */
+    .header__section {
+        height: 15vh;
+    }
+    .header__logo-img {
+        height: 10vh;
+    }
+    .header__heading {
+        font-size: 4rem;
+    }
+    .header__nav {
+        font-size: 1rem;
+    }
+   
+    /* Team grid adjustments */
+    .team {
+        grid-template-columns: repeat(12, 1fr);
+    }
+    
+    /* Adjust card sizes and contents */
+
+    /* Goalkeeper */
+    .team__goalkeeper-front, .team__goalkeeper-back {
+        font-size: 0.8rem;
+        height: 25vh;
+        padding-top: 2%;
+    }
+
+    /* Defenders */
+    .team__defender--one .team__defender-front,
+    .team__defender--one .team__defender-back,
+    .team__defender--two .team__defender-front,
+    .team__defender--two .team__defender-back,
+    .team__defender--three .team__defender-front,
+    .team__defender--three .team__defender-back,
+    .team__defender--four .team__defender-front,
+    .team__defender--four .team__defender-back {
+        font-size: 0.8rem;
+        height: 25vh;
+        padding-top: 2%;
+    }
+
+    /* Midfielders */
+    .team__midfield--one .team__midfield-front,
+    .team__midfield--one .team__midfield-back,
+    .team__midfield--two .team__midfield-front,
+    .team__midfield--two .team__midfield-back,
+    .team__midfield--three .team__midfield-front,
+    .team__midfield--three .team__midfield-back,
+    .team__midfield--four .team__midfield-front,
+    .team__midfield--four .team__midfield-back {
+        font-size: 0.8rem;
+        height: 25vh;
+        padding-top: 2%;
+    }
+
+    /* Forwards */
+    .team__forward--one .team__forward-front,
+    .team__forward--one .team__forward-back,
+    .team__forward--two .team__forward-front,
+    .team__forward--two .team__forward-back,
+    .team__forward--three .team__forward-front,
+    .team__forward--three .team__forward-back,
+    .team__forward--four .team__forward-front,
+    .team__forward--four .team__forward-back,
+    .team__forward--five .team__forward-front,
+    .team__forward--five .team__forward-back,
+    .team__forward--six .team__forward-front,
+    .team__forward--six .team__forward-back {
+        font-size: 0.8rem;
+        height: 25vh;
+        padding-top: 2%;
+    }
+
+    /* Manager */
+    .team__manager--one .team__manager-front,
+    .team__manager--one .team__manager-back {
+        font-size: 0.8rem;
+        height: 25vh;
+        padding-top: 2%;
+    }
+
+    /* Adjust images */
+    .team__player-image img, .team__player-nationality img {
+        height: 15vh;
+        
+    }
+
+    /* Footer adjustments */
+    .contact {
+       
+    }
+    .contact__details {
+        font-size: 70%;
+    }
+}
+
+/* mobile (max-width: 690px) */
+@media only screen and (max-width: 690px) {
+    
+    /* Header adjustments */
+    .header__logo-img {
+        height: 8vh;
+    }
+    .header__heading {
+        font-size: 2.5rem;
+    }
+    
+    /* Adjust card sizes and contents */
+
+    /* Goalkeeper */
+    .team__goalkeeper-front, .team__goalkeeper-back {
+        font-size: 0.7rem;
+        height: 25vh
+    }
+
+    /* Defenders */
+    .team__defender--one .team__defender-front,
+    .team__defender--one .team__defender-back,
+    .team__defender--two .team__defender-front,
+    .team__defender--two .team__defender-back,
+    .team__defender--three .team__defender-front,
+    .team__defender--three .team__defender-back,
+    .team__defender--four .team__defender-front,
+    .team__defender--four .team__defender-back {
+        font-size: 0.7rem;
+        height: 25vh;
+        padding: 1%;
+    }
+
+    /* Midfielders */
+    .team__midfield--one .team__midfield-front,
+    .team__midfield--one .team__midfield-back,
+    .team__midfield--two .team__midfield-front,
+    .team__midfield--two .team__midfield-back,
+    .team__midfield--three .team__midfield-front,
+    .team__midfield--three .team__midfield-back,
+    .team__midfield--four .team__midfield-front,
+    .team__midfield--four .team__midfield-back {
+        font-size: 0.7rem;
+        height: 25vh;
+        padding: 1%;
+    }
+
+    /* Forwards */
+    .team__forward--one .team__forward-front,
+    .team__forward--one .team__forward-back,
+    .team__forward--two .team__forward-front,
+    .team__forward--two .team__forward-back,
+    .team__forward--three .team__forward-front,
+    .team__forward--three .team__forward-back,
+    .team__forward--four .team__forward-front,
+    .team__forward--four .team__forward-back,
+    .team__forward--five .team__forward-front,
+    .team__forward--five .team__forward-back,
+    .team__forward--six .team__forward-front,
+    .team__forward--six .team__forward-back {
+        font-size: 0.7rem;
+        height: 25vh;
+        padding: 1%;
+    }
+
+    /* Manager */
+    .team__manager--one .team__manager-front,
+    .team__manager--one .team__manager-back {
+        font-size: 0.7rem;
+        height: 25vh;
+    }
+
+    /* Adjust images */
+    .team__player-image img, .team__player-nationality img {
+        height: 12vh;
+       
+    }
+
+    /* Footer adjustments */
+    .contact {
+        font-size: 0.8rem;
+        height: 10vh;
+    }
+}
+
