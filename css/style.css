@@ -9,7 +9,8 @@
     src: url("/assets/fonts/bebas-regular.ttf") format(truetype);
 }
 
-/* Header */
+
+/* Header Section */
 header {
     position: sticky;
     z-index: 100;
@@ -19,54 +20,51 @@ header {
 .header__section {
     display: flex;
     justify-content: space-between;
-    background-color: rgb(200, 16, 46);
-    width: 100%;
-    height: 20vh;
+    align-items: center; 
+    padding: 1rem;
+    background-color: rgb(200, 16, 46); 
 }
 
+/* Logo */
 .header__logo {
-    align-content: center;
+    max-width: 100px; 
 }
 
 .header__logo-img {
-    height: 15vh;
     width: 100%;
+    height: auto; 
 }
 
+/* Heading Title */
 .header__heading {
-    font-family: "bebas";
-    font-size: 5rem;
+    text-align: center;
+    font-family: "bebas", sans-serif;
+    font-size: 4rem;
+    justify-self: center;
     color: white;
-    align-self: center;
 }
 
-.header__nav {
-    align-self: center;
-    font-size: 1.5rem;
-    margin-right: 2%;
-}
-
-.header__nav-list {
-    font-family: "bebas";
-    list-style-type: none;
-    cursor: pointer;
+/* nav bar */
+.header__nav-list li {
+    list-style: none; 
 }
 
 .header__nav-list a {
-    color: white;
+    font-family: "bebas", sans-serif;
+    font-size: 1.5rem;
     text-decoration: none;
+    color: white;
+    padding: 0.5rem;
     border-bottom: 2px solid white;
 }
 
 .header__nav-list a:hover {
-    animation-delay: 400ms;
-    color: blue;
     cursor: pointer;
+    color: blue;
 }
 
-/* Main section */
 
-/* Main Header */
+/* Main section */
 .main__heading {
     font-family: "bebas";
     text-align: center;
@@ -77,739 +75,146 @@ header {
 
 /* Team section styles */
 .team {
-    /*border: 3px solid red;*/
     padding: 5% 5% 5% 10%;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-row-gap: 10%;
+    grid-template-rows: auto;
+    grid-row-gap: 4rem;
 }
+
+/* Image size */
 .team__player-image img, .team__player-nationality img {
     height: 18vh;
-    width: 72%;
+    width: 65%;
     cursor: pointer;
 }
 
-/* Goalkeeper styles */
+/* Shared styles for all cards */
+.team__card {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    position: relative;
+    height: 32vh;
+    cursor: pointer;
+}
+
+.team__card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.team__card-front, .team__card-back {
+    border-radius: 15px;
+    background-color: rgb(200, 16, 46);
+    height: 100%;
+    width: 100%;
+    font-family: "bebas";
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.team__card-front {
+    transform: rotateY(0deg);
+}
+
+.team__card-back {
+    transform: rotateY(180deg);
+}
+
+/* Flip animation */
+.team__card:hover .team__card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Goalkeeper */
 .team__goalkeeper {
-    transform-style: preserve-3d;
-    perspective: 1000px;
-    height: 32vh;
-    width: 100%;
-    grid-column: 1 / span 11;
+    grid-column: 1 / span 3;
     grid-row: 1;
-    padding: 0;
-    margin: 0;
-    position: relative;
 }
 
-.team__goalkeeper-front, .team__goalkeeper-back {
-    border-radius: 15px;
-    background-color: rgb(200, 16, 46);
-    height: 30vh;
-    width: 18%;
-    font-family: "bebas";
-    font-size: 1.5rem;
-    color: white;
-    text-align: center;
-    backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: transform 0.8s ease;
+.team__goalkeeper .team__card {
+    width: 100%;
 }
 
-.team__goalkeeper-front {
-    transform: rotateY(0deg);
-}
-
-.team__goalkeeper-back {
-    transform: rotateY(180deg);
-}
-
-.team__goalkeeper-front:hover {
-    transform: rotateY(-180deg);
-}
-
-.team__goalkeeper-front:hover ~ .team__goalkeeper-back {
-    transform: rotateY(0deg);
-}
-
-
-/* Defender styles */
-
-/* Virgil Van Dijk Section */
+/* Defenders */
 .team__defender--one {
-    transform-style: preserve-3d;
-    perspective: 1000px;
-    height: 32vh;
-    width: 100%;
-    grid-column: 4 / span 11;
+    grid-column: 5 / span 3;
     grid-row: 1;
-    padding: 0;
-    margin: 0;
-    position: relative;
 }
 
-.team__defender-front, .team__defender-back {
-    border-radius: 15px;
-    background-color: rgb(200, 16, 46);
-    height: 30vh;
-    width: 22%;
-    font-family: "bebas";
-    font-size: 1.5rem;
-    color: white;
-    text-align: center;
-    backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: transform 0.8s ease;
-}
-
-.team__defender-front {
-    transform: rotateY(0deg);
-}
-
-.team__defender-back {
-    transform: rotateY(180deg);
-}
-
-.team__defender-front:hover {
-    transform: rotateY(-180deg);
-}
-
-.team__defender-front:hover ~ .team__defender-back {
-    transform: rotateY(0deg);
-}
-
-/* Ibrahima Konaté Section */
 .team__defender--two {
-    transform-style: preserve-3d;
-    perspective: 1000px;
-    height: 32vh;
-    width: 100%;
-    grid-column: 7 / span 11;
+    grid-column: 9 / span 3;
     grid-row: 1;
-    padding: 0;
-    margin: 0;
-    position: relative;
 }
 
-.team__defender--two .team__defender-front, .team__defender--two .team__defender-back {
-    border-radius: 15px;
-    background-color: rgb(200, 16, 46);
-    height: 30vh;
-    width: 33%;
-    font-family: "bebas";
-    font-size: 1.5rem;
-    color: white;
-    text-align: center;
-    backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: transform 0.8s ease;
-}
-
-.team__defender--two .team__defender-front {
-    transform: rotateY(0deg);
-}
-
-.team__defender--two .team__defender-back {
-    transform: rotateY(180deg);
-}
-
-.team__defender--two .team__defender-front:hover {
-    transform: rotateY(-180deg);
-}
-
-.team__defender--two .team__defender-front:hover ~ .team__defender-back {
-    transform: rotateY(0deg);
-}
-
-/* Andy Robertson Section */
 .team__defender--three {
-    transform-style: preserve-3d;
-    perspective: 1000px;
-    height: 32vh;
-    width: 100%;
-    grid-column: 10 / span 11;
-    grid-row: 1;
-    padding: 0;
-    margin: 0;
-    position: relative;
+    grid-column: 1 / span 3;
+    grid-row: 2;
 }
 
-.team__defender--three .team__defender-front, .team__defender--three .team__defender-back {
-    border-radius: 15px;
-    background-color: rgb(200, 16, 46);
-    height: 30vh;
-    width: 66%;
-    font-family: "bebas";
-    font-size: 1.5rem;
-    color: white;
-    text-align: center;
-    backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: transform 0.8s ease;
-}
-
-.team__defender--three .team__defender-front {
-    transform: rotateY(0deg);
-}
-
-.team__defender--three .team__defender-back {
-    transform: rotateY(180deg);
-}
-
-.team__defender--three .team__defender-front:hover {
-    transform: rotateY(-180deg);
-}
-
-.team__defender--three .team__defender-front:hover ~ .team__defender-back {
-    transform: rotateY(0deg);
-}
-
-/* Trent Alexander-Arnold Section */
 .team__defender--four {
-    transform-style: preserve-3d;
-    perspective: 1000px;
-    height: 32vh;
-    width: 100%;
-    grid-column: 1 / span 11;
+    grid-column: 5 / span 3;
     grid-row: 2;
-    padding: 0;
-    position: relative;
 }
 
-.team__defender--four .team__defender-front, .team__defender--four .team__defender-back {
-    border-radius: 15px;
-    background-color: rgb(200, 16, 46);
-    height: 30vh;
-    width: 18%;
-    font-family: "bebas";
-    font-size: 1.5rem;
-    color: white;
-    text-align: center;
-    backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: transform 0.8s ease;
-}
-
-.team__defender--four .team__defender-front {
-    transform: rotateY(0deg);
-}
-
-.team__defender--four .team__defender-back {
-    transform: rotateY(180deg);
-}
-
-.team__defender--four .team__defender-front:hover {
-    transform: rotateY(-180deg);
-}
-
-.team__defender--four .team__defender-front:hover ~ .team__defender-back {
-    transform: rotateY(0deg);
-}
-
-/* Midfielder styles */
-
-/* dominik szoboszlai section */
+/* Midfielders */
 .team__midfield--one {
-    transform-style: preserve-3d;
-    perspective: 1000px;
-    height: 32vh;
-    width: 100%;
-    grid-column: 4 / span 11;
+    grid-column: 9 / span 3;
     grid-row: 2;
-    padding: 0;
-    position: relative;
 }
 
-.team__midfield-front, .team__midfield-back {
-    border-radius: 15px;
-    background-color: rgb(200, 16, 46);
-    height: 30vh;
-    width: 22%;
-    font-family: "bebas";
-    font-size: 1.5rem;
-    color: white;
-    text-align: center;
-    backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: transform 0.8s ease;
-}
-
-.team__midfield-front {
-    transform: rotateY(0deg);
-}
-
-.team__midfield-back {
-    transform: rotateY(180deg);
-}
-
-.team__midfield-front:hover {
-    transform: rotateY(-180deg);
-}
-
-.team__midfield-front:hover ~ .team__midfield-back {
-    transform: rotateY(0deg);
-}
-
-/* Alexsis Mac Allister Section */
 .team__midfield--two {
-    transform-style: preserve-3d;
-    perspective: 1000px;
-    height: 32vh;
-    width: 100%;
-    grid-column: 7 / span 11;
-    grid-row: 2;
-    padding: 0;
-    position: relative;
+    grid-column: 1 / span 3;
+    grid-row: 3;
 }
-
-.team__midfield--two .team__midfield-front, .team__midfield--two .team__midfield-back {
-    border-radius: 15px;
-    background-color: rgb(200, 16, 46);
-    height: 30vh;
-    width: 33%;
-    font-family: "bebas";
-    font-size: 1.5rem;
-    color: white;
-    text-align: center;
-    backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: transform 0.8s ease;
-}
-
-.team__midfield--two .team__midfield-front {
-    transform: rotateY(0deg);
-}
-
-.team__midfield--two .team__midfield-back {
-    transform: rotateY(180deg);
-}
-
-.team__midfield--two .team__midfield-front:hover {
-    transform: rotateY(-180deg);
-}
-
-.team__midfield--two .team__midfield-front:hover ~ .team__midfield-back {
-    transform: rotateY(0deg);
-}
-
-/* Ryan Gravenberch Section */
 
 .team__midfield--three {
-    transform-style: preserve-3d;
-    perspective: 1000px;
-    height: 32vh;
-    width: 100%;
-    grid-column: 10 / span 11;
-    grid-row: 2;
-    padding: 0;
-    position: relative;
+    grid-column: 5 / span 3;
+    grid-row: 3;
 }
-
-.team__midfield--three .team__midfield-front, .team__midfield--three .team__midfield-back {
-    border-radius: 15px;
-    background-color: rgb(200, 16, 46);
-    height: 30vh;
-    width: 66%;
-    font-family: "bebas";
-    font-size: 1.5rem;
-    color: white;
-    text-align: center;
-    backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: transform 0.8s ease;
-}
-
-.team__midfield--three .team__midfield-front {
-    transform: rotateY(0deg);
-}
-
-.team__midfield--three .team__midfield-back {
-    transform: rotateY(180deg);
-}
-
-.team__midfield--three .team__midfield-front:hover {
-    transform: rotateY(-180deg);
-}
-
-.team__midfield--three .team__midfield-front:hover ~ .team__midfield-back {
-    transform: rotateY(0deg);
-}
-
-/* Wataru Endo Section */
 
 .team__midfield--four {
-    transform-style: preserve-3d;
-    perspective: 1000px;
-    height: 32vh;
-    width: 100%;
-    grid-column: 1 / span 11;
+    grid-column: 9 / span 3;
     grid-row: 3;
-    padding: 0;
-    position: relative;
 }
 
-.team__midfield--four .team__midfield-front, .team__midfield--four .team__midfield-back {
-    border-radius: 15px;
-    background-color: rgb(200, 16, 46);
-    height: 30vh;
-    width: 18%;
-    font-family: "bebas";
-    font-size: 1.5rem;
-    color: white;
-    text-align: center;
-    backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: transform 0.8s ease;
-}
-
-.team__midfield--four .team__midfield-front {
-    transform: rotateY(0deg);
-}
-
-.team__midfield--four .team__midfield-back {
-    transform: rotateY(180deg);
-}
-
-.team__midfield--four .team__midfield-front:hover {
-    transform: rotateY(-180deg);
-}
-
-.team__midfield--four .team__midfield-front:hover ~ .team__midfield-back {
-    transform: rotateY(0deg);
-}
-
-/* Forward styles */
-
-/* Cody Gakpo Section */
+/* Forwards */
 .team__forward--one {
-    transform-style: preserve-3d;
-    perspective: 1000px;
-    height: 32vh;
-    width: 100%;
-    grid-column: 4 / span 11;
-    grid-row: 3;
-    padding: 0;
-    position: relative;
+    grid-column: 1 / span 3;
+    grid-row: 4;
 }
-
-.team__forward-front, .team__forward-back {
-    border-radius: 15px;
-    background-color: rgb(200, 16, 46);
-    height: 30vh;
-    width: 22%;
-    font-family: "bebas";
-    font-size: 1.5rem;
-    color: white;
-    text-align: center;
-    backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: transform 0.8s ease;
-}
-
-.team__forward-front {
-    transform: rotateY(0deg);
-}
-
-.team__forward-back {
-    transform: rotateY(180deg);
-}
-
-.team__forward-front:hover {
-    transform: rotateY(-180deg);
-}
-
-.team__forward-front:hover ~ .team__forward-back {
-    transform: rotateY(0deg);
-}
-
-/* Luis Diaz Section */
 
 .team__forward--two {
-    transform-style: preserve-3d;
-    perspective: 1000px;
-    height: 32vh;
-    width: 100%;
-    grid-column: 7 / span 11;
-    grid-row: 3;
-    padding: 0;
-    position: relative;
+    grid-column: 5 / span 3;
+    grid-row: 4;
 }
-
-.team__forward--two .team__forward-front, .team__forward--two .team__forward-back {
-    border-radius: 15px;
-    background-color: rgb(200, 16, 46);
-    height: 30vh;
-    width: 33%;
-    font-family: "bebas";
-    font-size: 1.5rem;
-    color: white;
-    text-align: center;
-    backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: transform 0.8s ease;
-}
-
-.team__forward--two .team__forward-front {
-    transform: rotateY(0deg);
-}
-
-.team__forward--two .team__forward-back {
-    transform: rotateY(180deg);
-}
-
-.team__forward--two .team__forward-front:hover {
-    transform: rotateY(-180deg);
-}
-
-.team__forward--two .team__forward-front:hover ~ .team__forward-back {
-    transform: rotateY(0deg);
-}
-
-/* Mohamed Salah Section */
 
 .team__forward--three {
-    transform-style: preserve-3d;
-    perspective: 1000px;
-    height: 32vh;
-    width: 100%;
-    grid-column: 10 / span 11;
-    grid-row: 3;
-    padding: 0;
-    position: relative;
+    grid-column: 9 / span 3;
+    grid-row: 4;
 }
-
-.team__forward--three .team__forward-front, .team__forward--three .team__forward-back {
-    border-radius: 15px;
-    background-color: rgb(200, 16, 46);
-    height: 30vh;
-    width: 66%;
-    font-family: "bebas";
-    font-size: 1.5rem;
-    color: white;
-    text-align: center;
-    backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: transform 0.8s ease;
-}
-
-.team__forward--three .team__forward-front {
-    transform: rotateY(0deg);
-}
-
-.team__forward--three .team__forward-back {
-    transform: rotateY(180deg);
-}
-
-.team__forward--three .team__forward-front:hover {
-    transform: rotateY(-180deg);
-}
-
-.team__forward--three .team__forward-front:hover ~ .team__forward-back {
-    transform: rotateY(0deg);
-}
-
-/* diogo jota section */
 
 .team__forward--four {
-    transform-style: preserve-3d;
-    perspective: 1000px;
-    height: 32vh;
-    width: 100%;
-    grid-column: 1 / span 11;
-    grid-row: 4;
-    padding: 0;
-    position: relative;
+    grid-column: 1 / span 3;
+    grid-row: 5;
 }
-
-.team__forward--four .team__forward-front, .team__forward--four .team__forward-back {
-    border-radius: 15px;
-    background-color: rgb(200, 16, 46);
-    height: 30vh;
-    width: 18%;
-    font-family: "bebas";
-    font-size: 1.5rem;
-    color: white;
-    text-align: center;
-    backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: transform 0.8s ease;
-}
-
-.team__forward--four .team__forward-front {
-    transform: rotateY(0deg);
-}
-
-.team__forward--four .team__forward-back {
-    transform: rotateY(180deg);
-}
-
-.team__forward--four .team__forward-front:hover {
-    transform: rotateY(-180deg);
-}
-
-.team__forward--four .team__forward-front:hover ~ .team__forward-back {
-    transform: rotateY(0deg);
-}
-
-/* federico chiesa section */
 .team__forward--five {
-    transform-style: preserve-3d;
-    perspective: 1000px;
-    height: 32vh;
-    width: 100%;
-    grid-column: 4 / span 11;
-    grid-row: 4;
-    padding: 0;
-    position: relative;
+    grid-column: 5 / span 3;
+    grid-row: 5;
 }
-
-.team__forward--five .team__forward-front, .team__forward--five .team__forward-back {
-    border-radius: 15px;
-    background-color: rgb(200, 16, 46);
-    height: 30vh;
-    width: 22%;
-    font-family: "bebas";
-    font-size: 1.5rem;
-    color: white;
-    text-align: center;
-    backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: transform 0.8s ease;
-}
-
-.team__forward--five .team__forward-front {
-    transform: rotateY(0deg);
-}
-
-.team__forward--five .team__forward-back {
-    transform: rotateY(180deg);
-}
-
-.team__forward--five .team__forward-front:hover {
-    transform: rotateY(-180deg);
-}
-
-.team__forward--five .team__forward-front:hover ~ .team__forward-back {
-    transform: rotateY(0deg);
-}
-
-/* Darwin Nunez Section */
 .team__forward--six {
-    transform-style: preserve-3d;
-    perspective: 1000px;
-    height: 32vh;
-    width: 100%;
-    grid-column: 7 / span 11;
-    grid-row: 4;
-    padding: 0;
-    position: relative;
+    grid-column: 9 / span 3;
+    grid-row: 5;
 }
 
-.team__forward--six .team__forward-front, .team__forward--six .team__forward-back {
-    border-radius: 15px;
-    background-color: rgb(200, 16, 46);
-    height: 30vh;
-    width: 33%;
-    font-family: "bebas";
-    font-size: 1.5rem;
-    color: white;
-    text-align: center;
-    backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: transform 0.8s ease;
-}
-
-.team__forward--six .team__forward-front {
-    transform: rotateY(0deg);
-}
-
-.team__forward--six .team__forward-back {
-    transform: rotateY(180deg);
-}
-
-.team__forward--six .team__forward-front:hover {
-    transform: rotateY(-180deg);
-}
-
-.team__forward--six .team__forward-front:hover ~ .team__forward-back {
-    transform: rotateY(0deg);
-}
-
-/* Manager Section */
-
-/* Arne Slot Section */
-.team__manager--one {
-    transform-style: preserve-3d;
-    perspective: 1000px;
-    height: 32vh;
-    width: 100%;
-    grid-column: 10 / span 11;
-    grid-row: 4;
-    padding: 0;
-    position: relative;
-}
-
-.team__manager--one .team__manager-front, .team__manager--one .team__manager-back {
-    border-radius: 15px;
-    background-color: rgb(200, 16, 46);
-    height: 30vh;
-    width: 66%;
-    font-family: "bebas";
-    font-size: 1.5rem;
-    color: white;
-    text-align: center;
-    backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: transform 0.8s ease;
-}
-
-.team__manager--one .team__manager-front {
-    transform: rotateY(0deg);
-}
-
-.team__manager--one .team__manager-back {
-    transform: rotateY(180deg);
-}
-
-.team__manager--one .team__manager-front:hover {
-    transform: rotateY(-180deg);
-}
-
-.team__manager--one .team__manager-front:hover ~ .team__manager-back {
-    transform: rotateY(0deg);
-}
 
 /* Footer Section */
 .contact {
@@ -819,8 +224,8 @@ header {
     background-color: rgb(200, 16, 46);
     width: 100%;
     height: 20vh;
-    margin-top: 40vh;
 }
+
 .contact__details {
     display: flex;
     justify-content: space-evenly;
@@ -829,197 +234,84 @@ header {
     color: white;
     width: 100%;
 }
-.contact__info-text a {
-    color: white;
-    margin-left: 0.5rem;
-}
-.contact__info-text a:hover {
-    color: blue;
-    cursor: pointer;
-}
 
-/* Media Queries Section */
 
-/* tablets (max-width: 1334px) */
-@media only screen and (max-width: 1334px) {
-    
-    /* Header adjustments */
-    .header__section {
-        height: 15vh;
-    }
-    .header__logo-img {
-        height: 10vh;
-    }
-    .header__heading {
-        font-size: 4rem;
-    }
-    .header__nav {
-        font-size: 1rem;
-    }
-   
-    /* Team grid adjustments */
-    .team {
-        grid-template-columns: repeat(12, 1fr);
-    }
-    
-    /* Adjust card sizes and contents */
 
-    /* Goalkeeper */
-    .team__goalkeeper-front, .team__goalkeeper-back {
-        font-size: 0.8rem;
-        height: 25vh;
-        padding-top: 2%;
-    }
+/* Media Queries */
 
-    /* Defenders */
-    .team__defender--one .team__defender-front,
-    .team__defender--one .team__defender-back,
-    .team__defender--two .team__defender-front,
-    .team__defender--two .team__defender-back,
-    .team__defender--three .team__defender-front,
-    .team__defender--three .team__defender-back,
-    .team__defender--four .team__defender-front,
-    .team__defender--four .team__defender-back {
-        font-size: 0.8rem;
-        height: 25vh;
-        padding-top: 2%;
-    }
-
-    /* Midfielders */
-    .team__midfield--one .team__midfield-front,
-    .team__midfield--one .team__midfield-back,
-    .team__midfield--two .team__midfield-front,
-    .team__midfield--two .team__midfield-back,
-    .team__midfield--three .team__midfield-front,
-    .team__midfield--three .team__midfield-back,
-    .team__midfield--four .team__midfield-front,
-    .team__midfield--four .team__midfield-back {
-        font-size: 0.8rem;
-        height: 25vh;
-        padding-top: 2%;
-    }
-
-    /* Forwards */
-    .team__forward--one .team__forward-front,
-    .team__forward--one .team__forward-back,
-    .team__forward--two .team__forward-front,
-    .team__forward--two .team__forward-back,
-    .team__forward--three .team__forward-front,
-    .team__forward--three .team__forward-back,
-    .team__forward--four .team__forward-front,
-    .team__forward--four .team__forward-back,
-    .team__forward--five .team__forward-front,
-    .team__forward--five .team__forward-back,
-    .team__forward--six .team__forward-front,
-    .team__forward--six .team__forward-back {
-        font-size: 0.8rem;
-        height: 25vh;
-        padding-top: 2%;
-    }
-
-    /* Manager */
-    .team__manager--one .team__manager-front,
-    .team__manager--one .team__manager-back {
-        font-size: 0.8rem;
-        height: 25vh;
-        padding-top: 2%;
-    }
-
-    /* Adjust images */
-    .team__player-image img, .team__player-nationality img {
-        height: 15vh;
-        
-    }
-
-    /* Footer adjustments */
-    
-    .contact__details {
-        font-size: 70%;
-    }
-}
-
-/* mobile (max-width: 690px) */
-@media only screen and (max-width: 690px) {
-    
-    /* Header adjustments */
-    .header__logo-img {
-        height: 8vh;
+/* Tablet */
+@media only screen and (max-width: 1024px) {
+    /* header */
+    .header__logo {
+        max-width: 70px;
     }
     .header__heading {
         font-size: 2.5rem;
     }
-    
-    /* Adjust card sizes and contents */
-
-    /* Goalkeeper */
-    .team__goalkeeper-front, .team__goalkeeper-back {
-        font-size: 0.7rem;
-        height: 25vh
+    .header__nav-list a {
+        font-size: 1rem;
     }
-
-    /* Defenders */
-    .team__defender--one .team__defender-front,
-    .team__defender--one .team__defender-back,
-    .team__defender--two .team__defender-front,
-    .team__defender--two .team__defender-back,
-    .team__defender--three .team__defender-front,
-    .team__defender--three .team__defender-back,
-    .team__defender--four .team__defender-front,
-    .team__defender--four .team__defender-back {
-        font-size: 0.7rem;
-        height: 25vh;
-        padding: 1%;
+    /* Main section */
+    .main__heading {
+        font-size: 2rem;
     }
-
-    /* Midfielders */
-    .team__midfield--one .team__midfield-front,
-    .team__midfield--one .team__midfield-back,
-    .team__midfield--two .team__midfield-front,
-    .team__midfield--two .team__midfield-back,
-    .team__midfield--three .team__midfield-front,
-    .team__midfield--three .team__midfield-back,
-    .team__midfield--four .team__midfield-front,
-    .team__midfield--four .team__midfield-back {
-        font-size: 0.7rem;
-        height: 25vh;
-        padding: 1%;
-    }
-
-    /* Forwards */
-    .team__forward--one .team__forward-front,
-    .team__forward--one .team__forward-back,
-    .team__forward--two .team__forward-front,
-    .team__forward--two .team__forward-back,
-    .team__forward--three .team__forward-front,
-    .team__forward--three .team__forward-back,
-    .team__forward--four .team__forward-front,
-    .team__forward--four .team__forward-back,
-    .team__forward--five .team__forward-front,
-    .team__forward--five .team__forward-back,
-    .team__forward--six .team__forward-front,
-    .team__forward--six .team__forward-back {
-        font-size: 0.7rem;
-        height: 25vh;
-        padding: 1%;
-    }
-
-    /* Manager */
-    .team__manager--one .team__manager-front,
-    .team__manager--one .team__manager-back {
-        font-size: 0.7rem;
-        height: 25vh;
-    }
-
-    /* Adjust images */
+    /* player image size */
     .team__player-image img, .team__player-nationality img {
-        height: 12vh;
-       
+        height: 15vh;
+        width: 60%;
     }
-
-    /* Footer adjustments */
-    .contact {
-        font-size: 0.8rem;
-        height: 10vh;
+    /* Shared styles for all cards */
+    .team__card {
+        height: 25vh;
+    }
+    .team__card-front, .team__card-back {
+        height: 100%;
+        width: 100%;
+        font-size: 1rem; 
+        padding: 2%
+    }
+    /* Footer */
+    .contact__details {
+        font-size: 1rem;
     }
 }
-
+ /* Mobile */
+@media only screen and (max-width: 597px) {
+    /* header */
+    .header__logo {
+        max-width: 50px;
+    }
+    .header__heading {
+        font-size: 2rem;
+    }
+    .header__nav-list a {
+        font-size: 0.8rem;
+    }
+    /* Main section */
+    .main__heading {
+        font-size: 1.5rem;
+    }
+    /* player image size */
+    .team__player-image img, .team__player-nationality img {
+        height: 12vh;
+        width: 55%;
+    }
+    /* Shared styles for all cards */
+    .team__card {
+        height: 25vh;
+    }
+    .team__card-front, .team__card-back {
+        height: 100%;
+        width: 100%;
+        font-size: 0.8rem; 
+        padding: 2%
+    }
+    /* Footer */
+    .contact {
+        height: 15vh;
+    }
+    .contact__details {
+        font-size: 0.8rem;
+    }
+    
+}
