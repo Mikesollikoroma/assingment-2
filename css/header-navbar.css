@@ -1,0 +1,52 @@
+/* Header Section */
+header {
+    position: sticky;
+    z-index: 100;
+    top: 0;
+}
+
+.header__section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 1rem;
+    background-color: rgb(200, 16, 46); 
+}
+
+/* Logo */
+.header__logo {
+    max-width: 100px; 
+}
+
+.header__logo-img {
+    width: 100%;
+    height: auto; 
+}
+
+/* Heading Title */
+.header__heading {
+    text-align: center;
+    font-family: "bebas", sans-serif;
+    font-size: 4rem;
+    justify-self: center;
+    color: white;
+}
+
+/* nav bar */
+.header__nav-list li {
+    list-style: none; 
+}
+
+.header__nav-list a {
+    font-family: "bebas", sans-serif;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem;
+    border-bottom: 2px solid white;
+}
+
+.header__nav-list a:hover {
+    cursor: pointer;
+    color: blue;
+}
