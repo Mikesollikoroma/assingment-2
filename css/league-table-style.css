@@ -4,11 +4,17 @@
     src: url("/assets/fonts/bebas-regular.ttf") format(truetype);
 }
 .table-border {
-   /* margin-left: auto;
-    margin-right: auto;*/
     margin: 10% auto;
     border-collapse: collapse;
     width: 50%;
+}
+caption {
+    font-family: "bebas", sans-serif;
+    font-size: 2em;
+    color: white;
+    background-color: rgb(200, 16, 46);
+    padding: 10px;
+    text-align: center;
 }
 
 .table-header {
@@ -17,9 +23,12 @@
 }
 
 .table-border th, .table-border td {
-    border: 1px solid black;
+    border: 2px solid grey;
     padding: 8px;
-    text-align: left;
+}
+
+td {
+    text-align: center;
 }
 
 .table-border th {
