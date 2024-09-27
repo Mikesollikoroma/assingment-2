@@ -3,3 +3,30 @@
     font-family: "bebas";
     src: url("/assets/fonts/bebas-regular.ttf") format(truetype);
 }
+.table-border {
+   /* margin-left: auto;
+    margin-right: auto;*/
+    margin: 10% auto;
+    border-collapse: collapse;
+    width: 50%;
+}
+
+.table-header {
+    color: white;
+    text-align: center;
+}
+
+.table-border th, .table-border td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+.table-border th {
+    background-color: rgb(47, 90, 189);
+}
+ .table-border .team-name {
+    color: white;
+    background-color: rgb(200, 16, 46);
+    text-align: center;
+ }
