@@ -6,15 +6,16 @@
 .table-border {
     margin: 10% auto;
     border-collapse: collapse;
-    width: 50%;
+    width: 95%;
 }
 caption {
     font-family: "bebas", sans-serif;
     font-size: 2em;
     color: white;
     background-color: rgb(200, 16, 46);
-    padding: 10px;
+    padding: 2%;
     text-align: center;
+    border-radius: 5px;
 }
 
 .table-header {
@@ -23,8 +24,9 @@ caption {
 }
 
 .table-border th, .table-border td {
-    border: 2px solid grey;
-    padding: 8px;
+    border: 2px solid black;
+    padding: 1.5%;
+    font-size: 1.1rem;
 }
 
 td {
