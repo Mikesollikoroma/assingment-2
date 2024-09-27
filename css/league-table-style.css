@@ -1,0 +1,5 @@
+/* font face styles */
+@font-face {
+    font-family: "bebas";
+    src: url("/assets/fonts/bebas-regular.ttf") format(truetype);
+}
