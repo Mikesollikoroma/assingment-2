@@ -4,7 +4,7 @@
     src: url("/assets/fonts/bebas-regular.ttf") format(truetype);
 }
 .table-border {
-    margin: 10% auto;
+    margin: 5% auto;
     border-collapse: collapse;
     width: 95%;
 }
