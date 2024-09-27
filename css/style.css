@@ -162,16 +162,6 @@
 
 /* Tablet */
 @media only screen and (max-width: 1024px) {
-    /* header */
-    .header__logo {
-        max-width: 70px;
-    }
-    .header__heading {
-        font-size: 2.5rem;
-    }
-    .header__nav-list a {
-        font-size: 1rem;
-    }
     /* Main section */
     .main__heading {
         font-size: 2rem;
@@ -198,16 +188,6 @@
 }
  /* Mobile */
 @media only screen and (max-width: 597px) {
-    /* header */
-    .header__logo {
-        max-width: 50px;
-    }
-    .header__heading {
-        font-size: 2rem;
-    }
-    .header__nav-list a {
-        font-size: 0.8rem;
-    }
     /* Main section */
     .main__heading {
         font-size: 1.5rem;
