@@ -3,39 +3,81 @@
     font-family: "bebas";
     src: url("/assets/fonts/bebas-regular.ttf") format(truetype);
 }
+
 .table-border {
     margin: 5% auto;
-    border-collapse: collapse;
     width: 95%;
-}
-caption {
     font-family: "bebas", sans-serif;
+}
+
+caption {
     font-size: 2em;
     color: white;
     background-color: rgb(200, 16, 46);
+    background: radial-gradient(circle, rgba(180,58,88,1) 0%, rgba(253,29,29,1) 58%, rgba(252,69,222,1) 100%);  
     padding: 2%;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 10px;
+    margin-bottom: 5px;
 }
 
 .table-header {
     color: white;
     text-align: center;
-    background: radial-gradient(circle, rgba(180,58,88,1) 0%, rgba(253,29,29,1) 58%, rgba(252,69,222,1) 100%);   
+    background-color: rgb(200, 16, 46);
+    background: radial-gradient(circle, rgba(180,58,88,1) 0%, rgba(253,29,29,1) 58%, rgba(252,69,222,1) 100%); 
+    font-style: italic;
 }
 
-.table-border th, .table-border td {
-    border: 2px solid black;
+.table-header th {
+    padding: 1.5%;
+    font-size: 1.5rem;
+    border-radius: 10px;
+}
+
+.table-header__team-name, .table-header__wins, .table-header__draws, .table-header__losses, .table-header__points {
+    border: 2px solid white;
+}
+
+tbody th, tbody td {
+    border-bottom: 2px solid white;
     padding: 1.5%;
     font-size: 1.1rem;
-}
-
-td {
+    border-radius: 10px;
     text-align: center;
 }
 
  .team-name {
     color: white;
-    background: radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(253,45,82,1) 100%);
+    background-color:rgb(200, 16, 46);
     text-align: center;
+    border: 2px solid white;
+ }
+
+ .wins {
+    color: white;
+    background-color: green;
+    border: 2px solid white;
+    font-weight: bold;
+ }
+
+ .draws {
+    color: white;
+    background-color: darkorange;
+    border: 2px solid white;
+    font-weight: bold;
+ }
+
+ .losses {
+    color: white;
+    background-color: red;
+    border: 2px solid white;
+    font-weight: bold;
+ }
+
+ .points {
+    color: white;
+    background-color: blue;
+    border: 2px solid white;
+    font-weight: bold;
  }
