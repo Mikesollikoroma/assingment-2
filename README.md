@@ -4,7 +4,7 @@ This project is based on and inspired by the Liverpool F.C. website and the curr
 
 ### Links 
 - **Github repository:** https://github.com/Mikesollikoroma/assingment-2.git
-- **Netlify deployment:** 
+- **Netlify deployment:** https://assingment-2-hoyskolenkristiania.netlify.app
 
 ### Sources
 - **Information about players and the leauge table from Liverpool F.C:** https://www.liverpoolfc.com/team/mens
